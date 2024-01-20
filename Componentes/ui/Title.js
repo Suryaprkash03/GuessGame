@@ -15,8 +15,10 @@ const styles = StyleSheet.create({
         fontWeight:'bold',
         color:'white',
         textAlign:'center',
-        borderWidth:2,
+        borderWidth:3,
         borderColor:'white',
         padding:12,
+        marginTop:20,
+        backgroundColor:'#1C2833'
     }
-})
+});
