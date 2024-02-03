@@ -1,7 +1,7 @@
 import { Image, StyleSheet, Text, View } from 'react-native';
 
 import PrimaryButton from '../Componentes/ui/PrimaryButton';
-import Title from '../Componentes/ui/Title';
+import Title from '../Componentes/ui/Title.ios';
 
 function GameOverScreen({ roundsNumber, userNumber, onStartNewGame }) {
   return (

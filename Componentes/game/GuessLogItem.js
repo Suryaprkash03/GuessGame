@@ -1,28 +1,35 @@
 import { StyleSheet, Text, View } from 'react-native';
 
 
-function NumberContainer({ children }) {
+function GuessLogItem({ roundNumber, guess }) {
   return (
-    <View style={styles.container}>
-      <Text style={styles.numberText}>{children}</Text>
+    <View style={styles.listItem}>
+      <Text style={styles.itemText}>#{roundNumber}</Text>
+      <Text style={styles.itemText}>Opponent's Guess: {guess}</Text>
     </View>
   );
 }
 
-export default NumberContainer;
+export default GuessLogItem;
 
 const styles = StyleSheet.create({
-  container: {
-    borderWidth: 4,
+  listItem: {
     borderColor:'white',
-    padding: 10,
-    margin: 19,
-    borderRadius: 8,
-    alignItems: 'center',
-    justifyContent: 'center',
+    borderWidth: 1,
+    borderRadius: 40,
+    padding: 12,
+    marginVertical: 8,
+    backgroundColor: 'white',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: '100%',
+    elevation: 4,
+    shadowColor: 'black',
+    shadowOffset: { width: 0, height: 0 },
+    shadowOpacity: 0.25,
+    shadowRadius: 3,
   },
-  numberText: {
-    color:'white',
-    fontSize: 36,
-  },
+  itemText: {
+    fontFamily: 'open-sans'
+  }
 });

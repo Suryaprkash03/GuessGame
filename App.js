@@ -1,8 +1,10 @@
 import AppLoading from 'expo-app-loading';
 import { useFonts } from 'expo-font';
 import { LinearGradient } from 'expo-linear-gradient';
+import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
 import { ImageBackground, SafeAreaView, StyleSheet } from 'react-native';
+
 
 import GameOverScreen from './screens/GameOverScreen';
 import GameScreen from './screens/GameScreen';
@@ -56,19 +58,22 @@ export default function App() {
   }
 
   return (
-    <LinearGradient
-      colors={['#ABEBC6', '#ABEBC6', '#45B39D']}
-      style={styles.rootScreen}
-    >
-      <ImageBackground
-        source={require('./assets/Images/background.jpg')}
-        resizeMode="cover"
+    <>
+      <StatusBar style="light" />
+      <LinearGradient
+        colors={['#ABEBC6', '#ABEBC6', '#45B39D']}
         style={styles.rootScreen}
-        imageStyle={styles.backgroundImage}
       >
-        <SafeAreaView style={styles.rootScreen}>{screen}</SafeAreaView>
-      </ImageBackground>
-    </LinearGradient>
+        <ImageBackground
+          source={require('./assets/Images/background.jpg')}
+          resizeMode="cover"
+          style={styles.rootScreen}
+          imageStyle={styles.backgroundImage}
+        >
+          <SafeAreaView style={styles.rootScreen}>{screen}</SafeAreaView>
+        </ImageBackground>
+      </LinearGradient>
+    </>
   );
 }
 

@@ -7,7 +7,7 @@ import NumberContainer from '../Componentes/game/NumberContainer';
 import Card from '../Componentes/ui/Card';
 import InstrctionText from '../Componentes/ui/InstrctionText';
 import PrimaryButton from '../Componentes/ui/PrimaryButton';
-import Title from '../Componentes/ui/Title';
+import Title from '../Componentes/ui/Title.ios';
 
 function generateRandomBetween(min, max, exclude) {
   const rndNum = Math.floor(Math.random() * (max - min)) + min;
@@ -109,8 +109,8 @@ export default GameScreen;
 
 const styles = StyleSheet.create({
   screen: {
-    flex: 1,
-    padding: 24,
+    flex:1,
+    padding:20,
   },
   instructionText: {
     marginBottom: 12,
